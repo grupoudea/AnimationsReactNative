@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Animated, Easing } from 'react-native'
 
 const Animation2 = () => {
 
-    const [animation] = useState(new Animated.Value(1));
+    const [animation] = useState(new Animated.Value(0));
     const [animation2] = useState(new Animated.Value(0));
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const Animation2 = () => {
             animation2, {
             toValue: 360,
             easing: Easing.in(Easing.bounce),
-            duration: 1000,
+            duration: 3000,
             useNativeDriver: false,
         })
 
@@ -38,7 +38,7 @@ const Animation2 = () => {
     })
 
     const interpolation2 = animation2.interpolate({
-        inputRange: [0, 1],
+        inputRange: [0, 360],
         outputRange: ['0deg', '-360deg'],
     })
 
@@ -54,7 +54,7 @@ const Animation2 = () => {
 
     const animationStyle = {
         transform: [{
-            rotate: interpolation,
+            rotateZ: interpolation,
         }]
 
     }
@@ -102,19 +102,19 @@ const Animation2 = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        borderWidth: 1,
-        borderColor: 'red',
+        borderWidth: 0,
+        borderColor: 'grey',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'transparent'
     },
     box: {
-        zIndex: 9999,
+        zIndex: 999,
         width: 100,
         height: 100,
         borderRadius: 20,
         backgroundColor: 'red',
-        opacity: 0.6
+        opacity: 0.8
     },
     box2: {
         position: 'absolute',
