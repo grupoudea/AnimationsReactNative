@@ -44,12 +44,12 @@ const Animation2 = () => {
 
     const interpolationColor = animation.interpolate({
         inputRange: [0, 360],
-        outputRange: ['#7ad95e', '#5e99d9'],
+        outputRange: ['#ddf814', '#5e99d9'],
     })
 
     const interpolationColor2 = animation.interpolate({
         inputRange: [0, 360],
-        outputRange: ['#be2752', '#9c27be'],
+        outputRange: ['#fb16fe', '#fe1636'],
     })
 
     const animationStyle = {
@@ -110,23 +110,23 @@ const styles = StyleSheet.create({
     },
     box: {
         zIndex: 999,
-        width: 100,
-        height: 100,
-        borderRadius: 20,
+        width: 30,
+        height: 30,
+        borderRadius: 5,
         backgroundColor: 'red',
-        opacity: 0.8
+        opacity: 0.7
     },
     box2: {
         position: 'absolute',
-        width: 100,
-        height: 100,
-        borderRadius: 15,
+        width: 30,
+        height: 30,
+        borderRadius: 6,
         backgroundColor: 'red',
         transform: [{
             rotateZ: '45deg',
 
         }],
-        opacity: 0.4
+        opacity: 0.6
     }
 });
 
